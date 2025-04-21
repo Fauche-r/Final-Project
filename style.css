@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: lightslategray;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#game-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px ;
+    padding: 20px;
+}
+.choice {
+    text-decoration: none;
+    background-color: lightcoral;
+    color: white;
+    padding: 30px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#username-form {
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    background-color: lightslategray;
+    color: white;
+    padding: 20px;
+}
+
+
+
