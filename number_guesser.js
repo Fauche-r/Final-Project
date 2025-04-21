@@ -10,11 +10,11 @@ form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const Guess = Number(input.value);
-if(attempt >0 ){
+if(attempt > 0 ){
     if (Guess < 0 || Guess > 100) {
         feedback.textContent = "Please enter a number between 0 and 100.";
         feedback.style.color = "orange";
-        attemptFeedback.textContent = " You have ${attempt} left";
+        attemptFeedback.textContent = ` You have ${attempt} left`;
     }
     else if (Guess < randomN) {
         feedback.textContent = "Higher!";
