@@ -1,4 +1,3 @@
-
 let randomN = Math.floor(Math.random() * 101);
 
 let attempt = 10;
@@ -13,11 +12,13 @@ form.addEventListener("submit", function (e) {
     const Guess = Number(input.value);
 if(attempt >0 ){
     if (Guess < 0 || Guess > 100) {
+        input.value = ""
         feedback.textContent = "Please enter a number between 0 and 100.";
         feedback.style.color = "orange";
         attemptFeedback.textContent = ` You have ${attempt} left`;
     }
     else if (Guess < randomN) {
+        input.value = ""
         feedback.textContent = `You guessed ${Guess} you need to go higher!`;
         feedback.style.color = "blue";
         attempt--;
@@ -25,6 +26,7 @@ if(attempt >0 ){
         
     } 
     else if (Guess > randomN) {
+        input.value = ""
         feedback.textContent = `You guessed ${Guess} you need to go lower!`;
         feedback.style.color = "blue";
         attempt--;
@@ -55,5 +57,6 @@ window.onload = function () {
         greeting.textContent = "You have not yet provided a username";
     }
 };
+
 
 
