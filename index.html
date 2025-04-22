@@ -5,41 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Game Main Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <header>
         <h1>Mini Game Main Page</h1>
+        <h4>
+            The main hub, where you can choose what you want to do.
+        </h4>
     </header>
-
-    <div id="game-selection">
-        <a class="choice" href="tic_tac_toe.html" target ="_blank">Tic-Tac-Toe</a>
-        <a class="choice" href="whack_a_mole.html" target ="_blank">Whack-a-mole</a>
-        <a class="choice" href="number_guesser.html" target = "_blank">Number Guesser</a>
+    <div id="welcome_banner">
+        <p id="greetings">You have not yet provided a username</p>
     </div>
-
-    <section id="username-form">
-        <h2>Enter Your Username</h2>
-        <form id="username-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username" required>
-            <p></p>
-            <button type="submit"> Submit</button>
-        </form>
-    </section>
-
-    <script>
-        window.onload = function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const userName = urlParams.get("username");
-
-            if (userName) {
-                alert(`Hello, ${userName}!`);
-            }
-        }
-    </script>
-
+    <div id="game-selection">
+        <a class="choice" href="log_in.html" target="_blank">Log In Page</a>
+        <a class="choice" href="whack_a_mole.html" target="_blank">Whack-a-mole</a>
+        <a class="choice" href="number_guesser.html" target="_blank">Number Guesser</a>
+    </div>
+    <script src="index.js"></script>
     <footer>
         <p>Final Project for CS 1080</p>
     </footer>
