@@ -18,14 +18,14 @@ if(attempt >0 ){
         attemptFeedback.textContent = ` You have ${attempt} left`;
     }
     else if (Guess < randomN) {
-        feedback.textContent = "Higher!";
+        feedback.textContent = `You guessed ${Guess} you need to go higher!`;
         feedback.style.color = "blue";
         attempt--;
         attemptFeedback.textContent = ` You have ${attempt} left`;
         
     } 
     else if (Guess > randomN) {
-        feedback.textContent = "Lower!";
+        feedback.textContent = `You guessed ${Guess} you need to go lower!`;
         feedback.style.color = "blue";
         attempt--;
         attemptFeedback.textContent = ` You have ${attempt} left`;
