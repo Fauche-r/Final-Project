@@ -42,19 +42,30 @@ if(attempt >0 ){
 }
 else{
     attemptFeedback.textContent = `You have ${attempt} attempt(s) left.`;
-    localStorage.setItem("attempt", attempt);
     input.disabled = true;
 }
+}
+);
+
+const buttonReset = document.getElementById("buttonReset");
+
+buttonReset.addEventListener("click", function () {
+    input.disabled = false;
+    input.value = "";
+    feedback.textContent = "";
+    attemptFeedback.textContent = "";
+    attempt = 10;
+    randomN = Math.floor(Math.random() * 101);
 }
 );
 
 window.onload = function () {
     const username = localStorage.getItem("username");
     const greeting = document.getElementById("greetings");
-    const attempt = localStorage.getItem("attempt");
+    const att = localStorage.getItem("attempt");
     
     if(username && attempt){
-        let a = 10- attempt;
+        let a = 10- att;
         greeting.textContent = `Your username is : ${username} and you guessed the right number in ${a} attempt, at best`; 
     }
     else if (username) 
@@ -65,6 +76,5 @@ window.onload = function () {
         greeting.textContent = "You have not yet provided a username";
     }
 };
-
 
 
