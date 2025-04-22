@@ -1,0 +1,3 @@
+Mini Game Hub. This project is about creating a mini game website, where you can play 2 game, a number guesser, and whack-a-mole.
+I did this project alone. 
+It include a login page (which store the data provided in localStorage), a main page, where you can choose what you want to do (log in, play a game), and 2 mini-game, number guesser, and whack-a-mole (both record the high-score, and display it if you've already played this game before). They all include JavaScript, and CSS.
