@@ -36,11 +36,13 @@ if(attempt >0 ){
         feedback.textContent = `Correct!The number was ${randomN}.`;
         feedback.style.color = "green";
         attemptFeedback.textContent = ` You had ${attempt} left`;
+        localStorage.setItem("attempt", attempt);
         input.disabled = true;
     }
 }
 else{
     attemptFeedback.textContent = `You have ${attempt} attempt(s) left.`;
+    localStorage.setItem("attempt", attempt);
     input.disabled = true;
 }
 }
@@ -49,10 +51,16 @@ else{
 window.onload = function () {
     const username = localStorage.getItem("username");
     const greeting = document.getElementById("greetings");
-    if (username) 
+    const attempt = localStorage.getItem("attempt");
+    
+    if(username && attempt){
+        let a = 10- attempt;
+        greeting.textContent = `Your username is : ${username} and you guessed the right number in ${a} attempt, at best`; 
+    }
+    else if (username) 
         {
         greeting.textContent = `Your username is : ${username}`;    
-    } 
+    }  
     else {
         greeting.textContent = "You have not yet provided a username";
     }
