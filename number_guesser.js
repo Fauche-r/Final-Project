@@ -1,3 +1,4 @@
+
 let randomN = Math.floor(Math.random() * 101);
 
 let attempt = 10;
@@ -10,7 +11,7 @@ form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const Guess = Number(input.value);
-if(attempt > 0 ){
+if(attempt >0 ){
     if (Guess < 0 || Guess > 100) {
         feedback.textContent = "Please enter a number between 0 and 100.";
         feedback.style.color = "orange";
@@ -42,3 +43,17 @@ else{
 }
 }
 );
+
+window.onload = function () {
+    const username = localStorage.getItem("username");
+    const greeting = document.getElementById("greetings");
+    if (username) 
+        {
+        greeting.textContent = `Your username is : ${username}`;    
+    } 
+    else {
+        greeting.textContent = "You have not yet provided a username";
+    }
+};
+
+
